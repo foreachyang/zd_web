@@ -1,0 +1,172 @@
+<!--_meta 作为公共模版分离出去-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<LINK rel="Bookmark" href="/favicon.ico" >
+<LINK rel="Shortcut Icon" href="/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="/zd_web_/admin/static/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="/zd_web_/admin/static/h-ui.admin/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="/zd_web_/admin/lib/Hui-iconfont/1.0.7/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="/zd_web_/admin/lib/icheck/icheck.css" />
+<link rel="stylesheet" type="text/css" href="/zd_web_/admin/static/h-ui.admin/skin/default/skin.css" id="skin" />
+<link rel="stylesheet" type="text/css" href="/zd_web_/admin/static/h-ui.admin/css/style.css" />
+<link href="/zd_web_/admin/lib/webuploader/0.1.5/webuploader.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="page-container">
+	<form action="" class="form form-horizontal" id="form-article-add">
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>药品名称：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" value="" placeholder="" id="drug_name" name="drug_name">
+			</div>
+		</div>
+	
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>药品栏目：</label>
+			<div class="formControls col-xs-8 col-sm-9"> <span class="select-box">
+				<select name="drug_type" class="select" id="drug_type">
+					<option value="0">一级分类</option>
+					<option value="1">一级分类</option>
+					<option value="11">├二级分类</option>
+					<option value="12">├二级分类</option>
+					<option value="13">├二级分类</option>
+				</select>
+				</span> </div>
+		</div>
+	
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>允许评论：</label>
+			
+				
+					<input type="checkbox" id="commrnt" name="commrnt" value="">
+				
+		
+		</div>
+		
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>药品材料：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" name="drug_field" id="drug_field" placeholder="drug_field" value="" class="input-text">
+			</div>
+		</div>
+	
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>价格计算单位：</label>
+			<div class="formControls col-xs-8 col-sm-9"> <span class="select-box">
+				<select class="select" name="company" id="company">
+					<option>请选择</option>
+					<option value="1">件</option>
+					<option value="2">粒</option>
+					<option value="4">箱</option>
+				</select>
+				</span> </div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>药品重量：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" name="weight" id="weight" placeholder="" value="" class="input-text" style="width:90%">
+				kg</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>批发价格：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" name="wholesale" id="wholesale" placeholder="" value="" class="input-text" style="width:90%">
+				元</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>市场价格：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" name="market_price" id="market_price" placeholder="" value="" class="input-text" style="width:90%">
+				元</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>成本价格：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" name="const_price" id="const_price" placeholder="" value="" class="input-text" style="width:90%">
+				元</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>最低销售价格：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" name="supplier" id="supplier" placeholder="" value="" class="input-text" style="width:90%">
+				元</div>
+		</div>
+	
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>药品摘要：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<textarea name="drug_intro" id="drug_intro" cols="" rows="" class="textarea"  placeholder="请输入药品成分" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="textarealength(this,200)"></textarea>
+				<p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">缩略图：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<div class="uploader-thum-container">
+					<div id="fileList" class="uploader-list"></div>
+					<div id="filePicker">选择图片</div>
+					<button id="btn-star" class="btn btn-default btn-uploadstar radius ml-10">开始上传</button>
+				</div>
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">图片上传：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<div class="uploader-list-container">
+					<div class="queueList">
+						<div id="dndArea" class="placeholder">
+							<div id="filePicker-2"></div>
+							<p>或将照片拖到这里，单次最多可选300张</p>
+						</div>
+					</div>
+					<div class="statusBar" style="display:none;">
+						<div class="progress"> <span class="text">0%</span> <span class="percentage"></span> </div>
+						<div class="info"></div>
+						<div class="btns">
+							<div id="filePicker2"></div>
+							<div class="uploadBtn">开始上传</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row cl">
+			<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
+				<button id="submit" class="btn btn-primary radius" type="submit"><i class="Hui-iconfont">&#xe632;</i> 保存并提交审核</button>
+				<button id= class="btn btn-secondary radius" type="button"><i class="Hui-iconfont">&#xe632;</i> 保存草稿</button>
+				<button onClick="layer_close();" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+			</div>
+		</div>
+	</form>
+</div>
+
+<!--_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="/zd_web_/admin/lib/jquery/1.9.1/jquery.min.js"></script> 
+<script type="text/javascript" src="/zd_web_/admin/lib/layer/2.1/layer.js"></script> 
+<script type="text/javascript" src="/zd_web_/admin/lib/icheck/jquery.icheck.min.js"></script> 
+<script type="text/javascript" src="/zd_web_/admin/lib/jquery.validation/1.14.0/jquery.validate.min.js"></script> 
+<script type="text/javascript" src="/zd_web_/admin/lib/jquery.validation/1.14.0/validate-methods.js"></script> 
+<script type="text/javascript" src="/zd_web_/admin/lib/jquery.validation/1.14.0/messages_zh.min.js"></script> 
+<script type="text/javascript" src="/zd_web_/admin/static/h-ui/js/H-ui.js"></script> 
+<script type="text/javascript" src="/zd_web_/admin/static/h-ui.admin/js/H-ui.admin.js"></script> 
+<script type="text/javascript" src="/zd_web_/admin/static/h-ui.admin/js/comment.js"></script>
+<!--/_footer /作为公共模版分离出去-->
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="/zd_web_/admin/lib/webuploader/0.1.5/webuploader.min.js"></script> 
+<script type="text/javascript" src="/zd_web_/admin/lib/ueditor/1.4.3/ueditor.config.js"></script>
+<script type="text/javascript" src="/zd_web_/admin/lib/ueditor/1.4.3/ueditor.all.min.js"> </script>
+<script type="text/javascript" src="/zd_web_/admin/lib/ueditor/1.4.3/lang/zh-cn/zh-cn.js"></script>
+
+<script type="text/javascript" src="/zd_web_/js/product.js"></script>
+
+<script type="text/javascript" src="/zd_web_/js/product_image.js"></script>
+</body>
+</html>

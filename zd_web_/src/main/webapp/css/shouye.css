@@ -1,0 +1,221 @@
+div#zcContents {
+		width:1366px;
+		margin:0 auto;
+		margin-top:3px;
+	}
+div#zcContents h1 {
+		width:236px;
+		height:25px;
+		line-height:25px;
+		color:#fff;
+		background:url("../images/firstPage1.jpg") no-repeat center center;
+		font-family:normal;
+		font-size:13px;
+		padding-left:20px;
+		margin-bottom: 0px;
+		margin-top:0px;
+	}
+div#left {
+		margin-left:10px;
+		width:236px;
+		height:300px;
+		float:left;
+		margin-right: 10px;
+	}
+div#left h1 span,div#right h1 span {margin-left:100px;}
+div#left h1 span a,div#right h1 span a {
+		text-decoration:none;
+		font-weight:normal;
+	}
+div#left h1 span a:hover,div#right h1 span a:hover {color:#f60;}
+div#left div.jieshao {
+		width:236px;
+		height:314px;
+		border:1px solid #9BB9D1;
+		border-top:none;
+		color:#333;
+		background:#f6f9fb;
+	}
+div#left div.jieshao p {
+		line-height:20px;
+		overflow:hidden;
+		text-indent:2em;
+		padding:8px;
+		padding-top:0px;
+	}
+*+html div#left div.jieshao p {padding:0px;padding-left:3px;padding-bottom:0px;}
+div#left div.jieshao {
+		text-decoration:none;
+	}
+div#left div.jieshao p a {text-decoration:none;padding-right:15px;}
+div#left div.jieshao p a:hover {color:#f60;}
+div#left div.jieshao span.more {font-size:10px;}
+div#left div.jieshao p.p1 {
+		width:200px;
+		height:130px;
+		background:url("../images/gongsi.jpg") no-repeat 50% top;
+		margin-left:12px;
+}
+*+html div#left div.jieshao p.p2 {padding-top:5px;}
+div#center {
+		width:500px;
+		height:300px;
+		background:#fff;
+		float:left;
+		margin-left:8px;
+	}
+div#left h1 strong.more,div#center h1 strong.more,div#right h1 strong.more {font-size:8px;padding-left:1px;}
+div#left h1 span a,div#center h1 span a,div#right h1 span a {
+		color:#eee;
+}
+div#center {
+		width:500px;
+		height:300px;
+		background:#fff;
+		float:left;
+		margin-left:8px;
+		margin-right: 10px;
+	}
+div#center h1 {
+		width:500px;
+		height:25px;
+		padding-left:20px;
+		color:#fff;
+		background:url(../images/firstPage2.gif) no-repeat center center;
+	}
+div#center h1 span {margin-left:380px;}
+div#center h1 span a{text-decoration:none;font-weight:normal;}
+div#center h1 span a:hover {color:#f60;}
+div#center div.news {
+		width:500px;
+		height:314px;
+		border:1px solid #9BB9D1;
+		border-top:none;
+		background:#f6f9fb;
+	}
+div#center div.news ul {padding:10px;padding-top:12px;list-style: none}
+div#center div.news ul li {
+		height:29px;
+		line-height:29px;
+		background:url(../images/ico_2.gif) no-repeat left center;
+		padding-left:12px;
+		border-bottom:1px dashed #aaa;
+	}
+div#center div.news ul li a {
+		text-decoration:none;
+		color:#333;	
+		width:450px;
+		display:block;
+		word-break:keep-all;
+		white-space:nowrap;
+		overflow:hidden;
+		text-overflow:ellipsis;
+		font-family:Arial,ËÎÌå,ÐÂËÎÌå;
+	}
+div#center div.news ul li a:hover {color:#f60;}
+div#right {
+		width:236px;
+		height:300px;
+		float:left;
+		background:#fff;
+		margin-left:6px;
+		_margin-left:3px;
+	}
+div#right h1 {
+		width:236px;
+		height:25px;
+		padding-left:20px;
+	}
+div#right div.chanpin {
+		width:236px;
+		height:314px;
+		border:1px solid #9BB9D1;
+		border-top:none;
+		background:#f6f9fb;
+	}
+div#right ul {
+		padding:9px;
+		padding-top:4px;
+		padding-left:15px;
+		list-style: none;	
+	}
+div#right ul li {
+		height:25px;
+		line-height:25px;
+		background:url(../images/ico_2.gif) no-repeat left center;
+		padding-left:12px;
+		border-bottom:1px dashed #aaa;
+	}
+div#right ul li a {
+		text-decoration:none;
+		color:#333;
+	}
+div#right ul li a:hover {color:#f60;}
+div#zhicheng_wai {
+		width:1366px;
+		height:170px;
+		overflow:hidden;
+		margin:0 auto;
+		margin-top:55px;
+	}
+div#zhicheng_zhong {
+		width:7500px;
+		float:left;
+	}
+div#zhicheng_nei,div#zhicheng_con {float:left;}
+div#zhicheng_nei span{display:block;text-align:center;width:170px;}
+div#zhicheng_wai img {
+		display:block;
+		float:left;
+		width:170px;
+		height:150px;
+		border:none;
+	}
+div#zhicheng_nei a {
+		float:left; 
+		display:block;
+		width:170px;
+		height:25px;
+		line-height:25px;
+		color:#333;
+		text-decoration:none;
+		margin-left:6px;
+		_margin-left:6px;
+	}
+div#zhicheng_con a {
+		float:left; margin:0;
+		display:block;
+		width:170px;
+		color:#333;
+		text-decoration:none;
+		margin-left:6px;
+		_margin-left:6px;
+	}
+div#zhicheng_con a:hover,div#zhicheng_nei a:hover {
+		color:green;
+}
+div#zhicheng_con a:actived {color:pink;text-decoration:none;}
+
+div#footer {
+		width:990px;
+		height:150px;
+		margin:0 auto;
+		margin-top:5px;
+		text-align:center;
+		padding-top:10px;
+		font-size:16px;
+		background:#fff;
+	}
+div#footer p {
+		color:#999;
+		height:20px;
+		line-height:20px;
+	}
+div#footer p a {color:#666;text-decoration:none;}
+div#footer p a:hover {color:#f60;}
+div#footer p img {
+		margin-left:60px;
+		margin-top:5px;
+		border:none;
+	}
+	

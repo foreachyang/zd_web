@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">   
+           $(document).ready(function() {
+                    var options = {
+                          chart: {
+                                       renderTo: 'Container', //DIV容器ID
+                                       type: 'column'//报表类型
+                                     },
+                            //报表名称
+                            title:{
+                                     text:'测试'
+                                    }, 
+                              / /补充说明
+                      subtitle: {
+                                      text: '报表说明'
+
+                                     },
+                          yAxis: {
+                                       min: 0,
+                                       title: {
+                                               text: '单位(mm)'
+                                               }
+                                        },
+                                //x轴显示内容
+                              xAxis: {
+                                    categories: [ ]
+                                          },
+                                / /数据来源(多个对比的)        
+                                 series: [{},{},{},{}]
+                                };
+                               //json url 
+                                var url =  "http://127.0.0.1:8080/servlet/JsonServlet";
+                                $.getJSON(url,function(data) { 
+                                       var i,len=data.length;         
+                                        for( i=0;i<len;i++){
+
+                                          
+                                          options.series[i].data = data[i].list;    
+                                          options.series[i].name = data[i].name;
+
+                                           //对报表X轴显示名称赋值
+                                           options.xAxis.categories[i]=data[i].year;
+                                      }   
+                                   var chart = new Highcharts.Chart(options);
+                             });
+                      });  
+
+  </script>
+  <body>
+    <div id="container"></div>    
+  </body>
+</html>

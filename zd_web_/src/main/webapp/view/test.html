@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script  type="text/javascript" charset="utf-8" src="/zd_web_/DataTables/jquery.js"></script>
+<script  type="text/javascript" charset="utf-8" src="/zd_web_/js/login.js?time=new Date()"></script>
+<script type="text/javascript" src="/zd_web_/Handlebars/handlebars-v4.0.5.js"></script>
+<div id="list">
+</div>
+
+  <script id="people-template" type="text/x-handlebars-template">
+      {{#people}}
+        <div class="person">
+          <h2>{{userName}}</h2>
+		 
+        </div>
+      {{/people}}
+    </script>
+
+<script type="text/javascript">
+      $(document).ready(function() {
+        
+        // 编译模板
+        var template = Handlebars.compile($("#people-template").html());
+        
+    	$.ajax({
+        	url:'http://localhost:8080/zd_web_/user/test',
+        	dataType:'json',
+           
+         success:function(data){
+          alert(data.people);
+        	//var obj=data.parseJSON();
+        
+            $('#list').html(template(data));
+            
+          }	
+    	});
+        
+        /*
+        var data = {
+          people: [
+            { first_name: "zhoujie123", last_name: "1234" },
+      
+          ]
+        };
+        */
+        //赋值，并把模板的html给目标div
+      
+      });
+</script>
+<button type="submit" id="login-button"onclick="loadInfo()" >Login</button>
+</body>
+
+</html>

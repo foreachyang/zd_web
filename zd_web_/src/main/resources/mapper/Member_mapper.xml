@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cn.dao.Memberdao">
+
+<resultMap type="com.cn.pojo.User" id="Usersync">
+		<result property="sync" column="sync"/>
+		<result property="userName" column="userName"/>
+</resultMap>
+
+
+<resultMap type="com.cn.pojo.Member_pojo" id="selectmembers">
+		<result property="id" column="id"/>
+		<result property="customername" column="customername"/>
+		<result property="gender" column="gender"/>
+	    <result property="cellphonenumber" column="cellphonenumber"/>	
+	    <result property="staff" column="staff"/>
+	    <result property="sync" column="sync"/>
+	    <result property="company" column="company"/>
+	     <result property="mailbox" column="mailbox"/>
+</resultMap>
+
+<insert id="insert_member" parameterType="com.cn.pojo.Member_pojo">
+insert into t_member(id,CUSTOMERNAME,GENDER,CELLPHONENUMBER,STAFF,SYNC,COMPANY,	MAILBOX) values
+          (
+            #{id},
+            #{customername},
+            #{gender},
+            #{cellphonenumber},
+            #{staff},
+            #{sync},
+            #{company},
+            #{mailbox}
+          )
+</insert>
+
+<select id="select_usersync" parameterType="String" resultMap="Usersync">
+ select sync from t_user where username=#{userName} 
+
+</select>
+
+<select id="selectmember" resultMap="selectmembers">
+select * from t_member
+</select>
+</mapper>

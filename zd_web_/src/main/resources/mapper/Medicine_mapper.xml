@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cn.dao.Medicinedao">
+<insert id="insert_medicine" parameterType="com.cn.pojo.Medicine_pojo">
+insert into t_medicine(SALESMAN,DRUG_NAME,MEASUREMENT,REMARK,MARKELDATE,INVENTORY)
+   values(
+     #{Salesman},
+     #{drug_name},
+     #{Measurement},
+     #{Remark},
+     #{Markeldate},
+     #{Inventory}
+   )
+</insert>
+</mapper>

@@ -1,0 +1,79 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="lib/html5.js"></script>
+<script type="text/javascript" src="lib/respond.min.js"></script>
+<script type="text/javascript" src="lib/PIE_IE678.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="/zd_web_/admin/static/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="/zd_web_/admin/static/h-ui.admin/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="/zd_web_/admin/lib/Hui-iconfont/1.0.7/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="/zd_web_/admin/lib/icheck/icheck.css" />
+<link rel="stylesheet" type="text/css" href="/zd_web_/admin/static/h-ui.admin/skin/default/skin.css" id="skin" />
+<link rel="stylesheet" type="text/css" href="/zd_web_/admin/static/h-ui.admin/css/style.css" />
+<!--[if IE 6]>
+<script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('*');</script>
+<![endif]-->
+<title>角色管理</title>
+</head>
+<body>
+<link rel="stylesheet"  href="/zd_web_/DataTables/jquery.dataTables.css"/>
+<script  type="text/javascript" charset="utf-8" src="/zd_web_/DataTables/jquery.js"></script>
+<script  type="text/javascript" charset="utf-8" src="/zd_web_/DataTables/jquery.dataTables.js"></script>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 管理员管理 <span class="c-gray en">&gt;</span> 角色管理 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<div class="page-container">
+	<div class="cl pd-5 bg-1 bk-gray"> <span class="l"> <a href="" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> <a class="btn btn-primary radius" href="javascript:;" onclick="admin_role_add('添加角色','http://localhost:8080/zd_web_/admin_role/role_add','800')"><i class="Hui-iconfont">&#xe600;</i> 添加角色</a> </span> <span class="r">共有数据：<strong>54</strong> 条</span> </div>
+
+	<table id="list_role">
+		<thead>
+                    <tr>
+		
+				<th>id</th>		
+				<th >userName</th>
+				<th>roleid</th>
+				<th>sync</th>
+				</tr>
+			</thead>	
+		
+	</table>
+	
+</div>
+<script type="text/javascript">
+
+	$(document).ready( function () {
+	    $("#list_role").dataTable({
+	    	"processing":true,
+	    	"serverSide":true,
+	    	"bServerSave":true,
+	    	"paginationType":"full_numbers",
+	    	 "ajax":"http://localhost:8080/zd_web_/select",
+	    		
+	    		 "contentType":"application/json",
+	    		 "columns" : [ 
+				    {"data" : "id"},
+				    {"data" : "userName"},
+				    {"data" : "roleid"},
+				    {"data" : "sync"}  
+				    ]
+	    	 
+	    });
+	} );
+</script>
+
+<script type="text/javascript" src="/zd_web_/admin/lib/My97DatePicker/WdatePicker.js"></script> 
+<script type="text/javascript" src="/zd_web_/admin/static/h-ui/js/H-ui.js"></script> 
+<script type="text/javascript" src="/zd_web_/admin/static/h-ui.admin/js/H-ui.admin.js"></script> 
+<script type="text/javascript">
+function admin_role_add(){
+	location.href="http://localhost:8080/zd_web_/admin_role/role_add";
+}
+</script>
+</body>
+</html>

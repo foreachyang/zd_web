@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cn.dao.Porductdao">
+
+
+<resultMap type="com.cn.pojo.Product_pojo" id="selectproduct">
+		<result property="drug_name" column="drug_name"/>
+		<result property="drug_type" column="drug_type"/>
+		<result property="datr" column="datr"/>
+		<result property="commrnt" column="commrnt"/>
+		<result property="supplier" column="supplier"/>
+		<result property="company" column="company"/>
+		<result property="wholesale" column="wholesale"/>
+</resultMap>
+
+
+<resultMap type="com.cn.pojo.Product_pojo" id="selectpids">
+		<result property="drug_name" column="drug_name"/>
+		<result property="id" column="id"/>	
+</resultMap>
+
+<insert id="insert_Product" parameterType="com.cn.pojo.Product_pojo">
+INSERT
+INTO    t_product
+        (
+                drug_name   ,
+                drug_type   ,
+                commrnt     ,
+                drug_field  ,
+                supplier    ,
+                company     ,
+                weight      ,
+                wholesale   ,
+                const_price ,
+                market_price,
+                drug_intro  ,
+                id          ,
+                datr
+        )
+        VALUES
+        (
+                #{drug_name}   ,
+                #{drug_type}   ,
+                #{commrnt}     ,
+                #{drug_field}  ,
+                #{supplier}    ,
+                #{company}     ,
+                #{weight}      ,
+                #{wholesale}   ,
+                #{const_price} ,
+                #{market_price},
+                #{drug_intro}  ,
+                #{id}          ,
+                #{datr}
+        )
+</insert>
+
+<select id="select_Product" resultMap="selectproduct">
+ select drug_name,drug_type,datr,commrnt,supplier, company, wholesale from t_product
+</select>
+
+<select id="select_pid"  parameterType="long" resultMap="selectpids">
+ select drug_name,id from t_product where id=#{id}
+</select>
+<delete id="delete_product" parameterType="String">
+   delete from t_product where  drug_name=#{product}
+</delete>
+</mapper>

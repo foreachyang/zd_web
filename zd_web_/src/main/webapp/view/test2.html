@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8 "/>
+
+
+
+<title>角色管理</title>
+</head>
+<body>
+<link rel="stylesheet"  href="/zd_web_/DataTables/jquery.dataTables.css"/>
+<script  type="text/javascript" charset="utf-8" src="/zd_web_/DataTables/jquery.js"></script>
+<script  type="text/javascript" charset="utf-8" src="/zd_web_/DataTables/jquery.dataTables.js"></script>
+	<table id="list_role">
+		<thead>
+                    <tr>
+		
+				<th >id</th>
+				<th >userName</th>
+				<th>roleid</th>
+				<th>sync</th>
+				</tr>
+			</thead>	
+		
+	</table>
+	<!-- 业务脚本 -->
+
+<script type="text/javascript">
+alert("test");
+	$(document).ready( function () {
+		alert("roles id test");
+	    $("#list_role").dataTable({
+	    	"processing":true,
+	    	"serverSide":true,
+	    	"bServerSave":true,
+	    	"paginationType":"full_numbers",
+	    	 "ajax":"http://localhost:8080/zd_web_/select",
+	    		
+	    		 "contentType":"application/json",
+	    		 "columns" : [ 
+				    {"data" : "id"},
+				    {"data" : "userName"},
+				    {"data" : "roleid"},
+				    {"data" : "sync"}  
+				    ]
+	    	 
+	    });
+	} );
+</script>
+
+</body>
+</html>

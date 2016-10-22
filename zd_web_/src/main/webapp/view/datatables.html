@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8 "/>
+<title>数据查看</title>
+
+<script  type="text/javascript" charset="utf-8" src="/zd_web_/DataTables/jquery.js"></script>
+<script  type="text/javascript" charset="utf-8" src="/zd_web_/DataTables/jquery.dataTables.js"></script>
+</head>
+
+<body>
+<link rel="stylesheet"  href="/zd_web_/DataTables/jquery.dataTables.css"/>
+<div class="portlet-body p10">
+            <div class="form-body ">
+          
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label class="control-label col-md-3">User Name: </label>
+                            <div class="col-md-6">
+                                <input id="txt_UserName" name="txt_UserName" type="text" value="" />
+                                <span class="help-block">This is inline help </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/span-->
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label class="control-label col-md-4">Division：</label>
+                            <div class="col-md-6 form-inline">
+                                 
+                                <select id="Sel_Division" name="Gender">
+                                    <option value="">全部</option>
+                                    <option value="A">A</option>
+                                    <option value="B">B</option>
+                                 
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/span-->
+                </div>
+                  <div class="row">
+                    <div class="col-md-5">
+                   
+                        
+                    </div>
+                    <!--/span-->
+                    <div class="col-md-5">
+                        <div class="form-group">
+                           <button type="submit" id="btn_Search" class="btn green">Search</button>
+                        </div>
+                    </div>
+                    <!--/span-->
+                </div>
+            </div>
+        </div>
+        <div class="portlet-body p10">
+            <table id="datatable" class="table table-striped table-bordered table-hover" id="UserList">
+                <thead>
+                    <tr>
+                        <th>INVOICEID 
+                        </th>
+                        <th>INVODATE 
+                        </th>
+                        <th>NAME
+                        </th>
+                        <th>BANCKACCOUNT
+                        </th>
+                        <th>ADDRESS
+                        </th>
+                        <th>ACCOUNTNUMBER
+                        </th>
+                        <th>SALESMAN
+                        </th>
+                        <th>DEPART
+                        </th>
+                        <th>Operation
+                        </th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+<script type="text/javascript">
+$(document).ready( function () {
+	  alert("ready");
+    $("#datatable").dataTable({
+    	"processing":true,
+    	"serverSide":true,
+    	"bServerSave":true,
+    	"paginationType":"full_numbers",
+    	 "ajax":"http://localhost:8080/zd_web_/tables",
+    		
+    		 "contentType":"application/json",
+    		 "columns" : [ 
+			    {"data" : "invoiceid"},
+			    {"data" : "invodate"},
+			    {"data" : "name"},
+			    {"data" : "banckaccount"},
+			    {"data" : "address"},
+			    {"data" : "accountnumber"},
+			    {"data" : "salesman"},
+			    {"data" : "depart"}
+			    ]
+    	 
+    });
+} );
+</script>
+</body>
+</html>

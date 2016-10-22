@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>index</title>
+    <link href="/zd_web_/Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="/zd_web_/css/shouye.css" />
+    <script type="text/javascript" src="/zd_web_/js/gundon.js"></script>
+
+	<style type="text/css">
+	#contents
+	{
+		width:40%;
+		border:2px solid #5a5a5a;
+		position: relative;
+		margin-top:10px;
+		left:10px;
+	}
+	#contents #h
+	{
+	font-size: 14px;
+	color:white;
+	background-color:#5a5a5a;
+	}
+	#contents img{
+	margin:10px;
+	width:40%;
+	}
+	#contents #txt{
+	float:right;
+	}
+	</style>
+    <style>
+
+        body {
+            padding-top: 50px;
+            padding-bottom: 40px;
+            color: #5a5a5a;
+        }
+
+        /* 轮播广告 */
+
+        .carousel {
+            height: 500px;
+           
+        }
+
+        .carousel .item {
+            height: 500px;
+            background-color: #000;
+        }
+
+        .carousel .item img {
+            width: 100%;
+        }
+			
+        .carousel-caption {
+            z-index: 10;
+        }
+
+        .carousel-caption p {
+            margin-bottom: 20px;
+            font-size: 20px;
+            line-height: 1.8;
+        }
+
+        /* 简介 */
+
+        .summary {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        .summary .col-md-4 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* 特性 */
+
+        .feature-divider {
+            margin: 40px 0;
+        }
+
+        .feature {
+            padding: 30px 0;
+        }
+
+        .feature-heading {
+            font-size: 50px;
+            color: #2a6496;
+        }
+
+        .feature-heading .text-muted {
+            font-size: 28px;
+        }
+
+        /* 响应式布局 */
+
+        @media (max-width: 768px) {
+
+            .summary {
+                padding-right: 3px;
+                padding-left: 3px;
+            }
+
+            .carousel {
+                height: 300px;
+                margin-bottom: 30px;
+            }
+
+            .carousel .item {
+                height: 300px;
+            }
+
+            .carousel img {
+                min-height: 300px;
+            }
+
+            .carousel-caption p {
+                font-size: 16px;
+                line-height: 1.4;
+            }
+
+            .feature-heading {
+                font-size: 34px;
+            }
+
+            .feature-heading .text-muted {
+                font-size: 22px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .feature-heading {
+                margin-top: 120px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+<!-- 顶部导航 -->
+<script type="text/javascript" src="/zd_web_/js/login.js"></script>
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="menu-nav">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">生物科技有限公司</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a onclick="logins()">员工登录</a></li>
+               
+                <li><a onclick="admin()" data-toggle="modal" data-target="#about-modal">管理员登录</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<!-- 广告轮播 -->
+<div id="ad-carousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#ad-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#ad-carousel" data-slide-to="1"></li>
+        <li data-target="#ad-carousel" data-slide-to="2"></li>
+        <li data-target="#ad-carousel" data-slide-to="3"></li>
+        <li data-target="#ad-carousel" data-slide-to="4"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="/zd_web_/index_images/chrome-big.jpg" alt="1 slide">
+
+        </div>
+        <div class="item">
+            <img src="/zd_web_/index_images/firefox-big.jpg" alt="2 slide">
+
+            
+        </div>
+        <div class="item">
+            <img src="/zd_web_/index_images/safari-big.jpg" alt="3 slide">
+
+            
+        </div>
+        <div class="item">
+            <img src="/zd_web_/index_images/opera-big.jpg" alt="4 slide">
+
+            
+        </div>
+        <div class="item">
+            <img src="/zd_web_/index_images/ie-big.jpg" alt="5 slide">
+
+           
+        </div>
+    </div>
+    <a class="left carousel-control" href="#ad-carousel" data-slide="prev"><span
+            class="glyphicon glyphicon-chevron-left"></span></a>
+    <a class="right carousel-control" href="#ad-carousel" data-slide="next"><span
+            class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+<div id="zcContents">
+<div style="float:left;margin-top: 40px;">
+  <p><img src="http://shzhicheng.com/129.jpg" width="129" height="129" /></p>
+      <h3><font color=black>    <strong> &nbsp;&nbsp;微信扫一扫 </strong></font></h3>
+      <h3><strong><font color=black> &nbsp;获得更多内容</font></strong><font color=black></font></h3>
+</div>
+	<div id="left">
+			<h1>公司介绍<span><a href="/aboutus/?type=detail&id=1"> more<strong class="more">>></strong></a></span></h1>
+			<div class="jieshao">
+<p><p class="p1"></p>
+<p class="p2">上海执诚生物科技有限公司，位于上海国际医学园区(医谷) 康新公路3399弄6号楼，建筑面积3374平方米，注册资本5263.1579万元，员工一百余名。自1995年由王辉先生创始以来，已成为具有多年研发、生
+<a href="/aboutus/?type=detail&id=1">...more<span class="more">>></span></a></p>
+
+
+			</div><div class="firstPage_left_bottom"></div>
+	</div>
+	<div id="center">
+			<h1>新闻中心<span class="center_news"><a href="/news/?type=list&classid=1">more<strong class="more">>></strong></a></span></h1>
+			<div class="news">
+<ul>
+					 	<li><a style="color: red" href="news/?type=detail&amp;id=48">2016年7月运费加收通知</a></li>
+				
+					 	<li><a href="news/?type=detail&amp;id=47">号外号外：英文网站已改版完成了，过来瞧一瞧，看一看嘞！</a></li>
+				
+					 	<li><a href="news/?type=detail&amp;id=46">执诚生物祝大家新年快乐，万事如意！</a></li>
+				
+					 	<li><a href="news/?type=detail&amp;id=45">预祝大家平安夜欢乐！圣诞节快乐！</a></li>
+				
+					 	<li><a href="news/?type=detail&amp;id=44">中源协和：关于子公司上海执诚生物科技有限公司对外投资的公告</a></li>
+				
+					 	<li><a href="news/?type=detail&amp;id=43">执诚生物祝您:2015年新春快乐 </a></li>
+				
+					 	<li><a href="news/?type=detail&amp;id=40">上海执诚生物科技有限公司 展位号T41,诚邀光临我司展位! </a></li>
+				
+					 	<li><a href="news/?type=detail&amp;id=39">上海执诚生物科技有限公司 公司名称变更公告</a></li>
+				
+					</ul>
+			</div><div class="firstPage_center_bottom"></div>
+	</div>
+
+	<div id="right">
+			<h1>推荐产品<span><a href="/products/?type=list&classid=7">　more<strong class="more">>></strong></a></span></h1>
+			<div class="chanpin">
+				<ul>
+				
+					<li class="li1"><a href="http://localhost:8080/zd_web_/chanpin1">苏肽生</a></li>
+				
+					<li class="li1"><a href="http://localhost:8080/zd_web_/chanpin2">还少丹</a></li>
+				
+					<li class="li1"><a href="http://localhost:8080/zd_web_/chanpin3">龟历补肾丸</a></li>
+				
+					<li class="li1"><a href="http://localhost:8080/zd_web_/chanpin4">七十味珍珠丸</a></li>
+				
+					<li class="li1"><a href="http://localhost:8080/zd_web_/chanpin5">脑得生片</a></li>
+				
+					<li class="li1"><a href="products/?type=detail&amp;id=98">镇脑宁胶囊</a></li>
+				
+					<li class="li1"><a href="products/?type=detail&amp;id=76">降压丸</a></li>
+				
+					<li class="li1"><a href="products/?type=detail&amp;id=75">厄贝沙坦片</a></li>
+				
+					<li class="li1"><a href="products/?type=detail&amp;id=88">吲达帕胺片</a></li>
+				
+					<li class="li1"><a href="products/?type=detail&amp;id=97">舒泰清</a></li>
+				
+					<li class="li1"><a href="products/?type=detail&amp;id=97">大豆磷脂软胶囊</a></li>
+				
+					<li class="li1"><a href="products/?type=detail&amp;id=97">灵芝松花粉片</a></li>
+				</ul>
+			</div><div class="firstPage_right_bottom"></div>
+	</div>
+	<div style="float:right;margin-right: 20px;margin-top: 20px;">
+		<a href="#"><img src="/zd_web_/index_images/fuwu.jpg"></a>
+	</div>
+</div>
+
+
+<div style="clear:both;height:0px;overflow:hidden;"></div>
+ <div id="zhicheng_wai">
+ 		<div id="zhicheng_zhong">
+			<div id="zhicheng_nei">
+				<a href="http://localhost:8080/zd_web_/chanpin1"><img src="/zd_web_/index_images/yao1.jpg" /><span>苏肽生</span></a>
+				<a href="http://localhost:8080/zd_web_/chanpin2"><img src="/zd_web_/index_images/yao2.jpg" /><span>还少丹</span></a>
+				<a href="http://localhost:8080/zd_web_/chanpin3"><img src="/zd_web_/index_images/yao3.jpg" /><span>龟历补肾丸</span></a>
+				<a href="http://localhost:8080/zd_web_/chanpin4"><img src="/zd_web_/index_images/yao4.jpg" /><span>七十味珍珠丸</span></a>
+				<a href="http://localhost:8080/zd_web_/chanpin5"><img src="/zd_web_/index_images/yao5.jpg" /><span>脑得生片</span></a>
+				<a href="/products/?type=detail&id=96"><img src="/zd_web_/index_images/yao6.jpg" /><span>镇脑宁胶囊</span></a>
+				<a href="/products/?type=detail&id=94"><img src="/zd_web_/index_images/yao7.jpg" /><span>降压丸</span></a>
+				<a href="/products/?type=detail&id=94"><img src="/zd_web_/index_images/yao8.jpg" /><span>厄贝沙坦片</span></a>
+				<a href="/products/?type=detail&id=94"><img src="/zd_web_/index_images/yao9.jpg" /><span>吲达帕胺片</span></a>
+				<a href="/products/?type=detail&id=94"><img src="/zd_web_/index_images/yao10.jpg" /><span>舒泰清</span></a>
+				<a href="/products/?type=detail&id=94"><img src="/zd_web_/index_images/yao11.jpg" /><span>大豆磷脂软胶囊</span></a>
+				<a href="/products/?type=detail&id=94"><img src="/zd_web_/index_images/yao12.jpg" /><span>灵芝松花粉片</span></a>
+				<div id="zhicheng_con"></div>                
+			</div>
+ 	</div>
+</div>
+<div id="footer">
+		<p>上海执诚生物科技有限公司版权所有  沪ICP备09017734号</p>
+		<p>互联网药品信息服务资格证书:（沪）-非经营性-2011-0056</p>
+		<p><a href="/sitemap/?type=detail&id=1">站点地图</a> | <a href="/contactus/?type=detail&id=1">联系我们</a> | <a href="http://www.shzhicheng.com/upgrade.htm" target="_blank">执诚系统</a> | <a href="http://mail.shzhicheng.com/#lang=cn" target="_blank">登录邮箱</a></p>
+		<p><a href="http://sh.cyberpolice.cn/infoCategoryListAction.do?act=initjpg"><img src="/zd_web_/index_images/police.png" /></a><a href="http://www.zx110.org"><img src="images/zx110.png" /></a><img src="/zd_web_/index_images/icp.png" /></p>
+</div>
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=47555944" charset="UTF-8"></script>
+<script src="/zd_web_/js/jquery-2.1.1.min.js"></script>
+<script src="/zd_web_/js/bootstrap.js"></script>
+<script>
+    $(function () {
+        $('#ad-carousel').carousel();
+        $('#menu-nav .navbar-collapse a').click(function (e) {
+            var href = $(this).attr('href');
+            var tabId = $(this).attr('data-tab');
+            if ('#' !== href) {
+                e.preventDefault();
+                $(document).scrollTop($(href).offset().top - 70);
+                if (tabId) {
+                    $('#feature-tab a[href=#' + tabId + ']').tab('show');
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>

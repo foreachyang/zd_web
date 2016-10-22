@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cn.dao.Invoicedao">
+
+<insert id="insert_Invoice" parameterType="com.cn.pojo.Invoice_pojo" >
+ INSERT INTO INVOICE(INVOICEID, INVODATE, NAME, BANCKACCOUNT, ADDRESS,ACCOUNTNUMBER,SALESMAN,DEPART) VALUES(
+                                          #{invoiceid},
+                                          #{invodate},
+                                          #{name},
+                                          #{banckaccount},
+                                          #{address},
+                                          #{accountnumber},
+                                          #{salesman},
+                                          #{depart}
+                                           )
+</insert>
+
+<resultMap type="com.cn.pojo.Invoice_pojo" id="InvoiceMap">
+ <result column="INVOICEID" property="invoiceid" jdbcType="INTEGER" javaType="Integer"/>
+<result column="INVODATE" property="invodate" jdbcType="TIMESTAMP" javaType="Date"/>
+<result column="NAME" property="name" jdbcType="VARCHAR" javaType="String"/>
+<result column="BANCKACCOUNT" property="banckaccount" jdbcType="VARCHAR" javaType="String"/>
+<result column="ADDRESS" property="address" jdbcType="VARCHAR" javaType="String"/>
+<result column="ACCOUNTNUMBER" property="accountnumber" jdbcType="INTEGER" javaType="Integer"/>
+<result column="SALESMAN" property="salesman" jdbcType="VARCHAR" javaType="String"/>
+<result column="DEPART" property="depart" jdbcType="VARCHAR" javaType="String"/>
+</resultMap>
+
+<select id="select_Invoice"  resultMap="InvoiceMap">
+  SELECT  INVOICEID    ,
+         INVODATE     ,
+        NAME         ,
+        BANCKACCOUNT ,
+        ADDRESS      ,
+        ACCOUNTNUMBER,
+        SALESMAN     ,
+        DEPART
+FROM    INVOICE
+
+</select>
+
+</mapper>

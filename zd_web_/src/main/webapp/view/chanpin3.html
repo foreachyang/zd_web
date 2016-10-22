@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>药品展示</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="css/yaopin.css" />
+ <link href="/zd_web_/css/Bootstrap/bootstrap.min.css" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="/zd_web_/css/yaopin.css" />
+	<link rel="stylesheet" type="text/css" href="/zd_web_/admin/static/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="/zd_web_/admin/static/h-ui.admin/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="/zd_web_/admin/lib/Hui-iconfont/1.0.7/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="/zd_web_/admin/lib/icheck/icheck.css" />
+<link rel="stylesheet" type="text/css" href="/zd_web_/admin/static/h-ui.admin/skin/default/skin.css" id="skin" />
+<link rel="stylesheet" type="text/css" href="/zd_web_/admin/static/h-ui.admin/css/style.css" />
+  
+	<style type="text/css">
+	#contents
+	{
+		width:40%;
+		border:2px solid #5a5a5a;
+		position: relative;
+		margin-top:10px;
+		left:10px;
+	}
+	#contents #h
+	{
+	font-size: 14px;
+	color:white;
+	background-color:#5a5a5a;
+	}
+	#contents img{
+	margin:10px;
+	width:40%;
+	}
+	#contents #txt{
+	float:right;
+	}
+	</style>
+    <style>
+
+        body {
+            padding-top: 50px;
+            padding-bottom: 40px;
+            color: #5a5a5a;
+        }
+
+        /* 轮播广告 */
+
+        .carousel {
+            height: 500px;
+           
+        }
+
+        .carousel .item {
+            height: 500px;
+            background-color: #000;
+        }
+
+        .carousel .item img {
+            width: 100%;
+        }
+			
+        .carousel-caption {
+            z-index: 10;
+        }
+
+        .carousel-caption p {
+            margin-bottom: 20px;
+            font-size: 20px;
+            line-height: 1.8;
+        }
+
+        /* 简介 */
+
+        .summary {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        .summary .col-md-4 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* 特性 */
+
+        .feature-divider {
+            margin: 40px 0;
+        }
+
+        .feature {
+            padding: 30px 0;
+        }
+
+        .feature-heading {
+            font-size: 50px;
+            color: #2a6496;
+        }
+
+        .feature-heading .text-muted {
+            font-size: 28px;
+        }
+
+        /* 响应式布局 */
+
+        @media (max-width: 768px) {
+
+            .summary {
+                padding-right: 3px;
+                padding-left: 3px;
+            }
+
+            .carousel {
+                height: 300px;
+                margin-bottom: 30px;
+            }
+
+            .carousel .item {
+                height: 300px;
+            }
+
+            .carousel img {
+                min-height: 300px;
+            }
+
+            .carousel-caption p {
+                font-size: 16px;
+                line-height: 1.4;
+            }
+
+            .feature-heading {
+                font-size: 34px;
+            }
+
+            .feature-heading .text-muted {
+                font-size: 22px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .feature-heading {
+                margin-top: 120px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+<!-- 顶部导航 -->
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="menu-nav">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">生物科技有限公司</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="http://localhost:8080/zd_web_">首页</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<div id="zcContents">
+	<div style="width: 200px;">
+		<div style="float:left; margin-right:20px;margin-top: 20px">
+	  	<p><img src="http://shzhicheng.com/129.jsortlistpg" width="129" height="129" /></p>
+	      <h3><font color=black>    <strong> &nbsp;&nbsp;微信扫一扫 </strong></font></h3>
+	      <h3><strong><font color=black> &nbsp;获得更多内容</font></strong><font color=black></font></h3>
+		</div>
+	</div>
+	<div class="sidebar_left sortlist" id="sortlist">
+		<div id="zixie1">
+		<h1 style="margin: 0px">产品展示</h1>
+		<div style="padding-top: 0px;"><img src="images/yao_3.jpg"></div>
+		</div>
+			<div id="zcservices">
+				<div>
+					<ul>
+						<li class="firstLi"><span class="span1">Services</span><span class="span2">|</span><span class="span3">客户服务</span></li>
+						<li class="serviceLi"><p><span class="title">tel</span>：800-820-3606</p><p class="p2">400-820-3606</p></li>
+						<li class="address"><span class="title">地址</span>：上海市浦东新区康新公路3399号6号楼</li>
+						<li><span class="title">邮编</span>：201318</li>
+						<li class="telephone"><span class="title">电话</span>：0086-021-50610052</li>
+						<li><span class="title">传真</span>：0086-021-68926001</li>
+						<li class="email"><p><span class="title">邮箱</span>：reagent@shzhicheng.com</p><p class="p2">zhicheng@shzhicheng.com</p></li>
+						<li class="endServicesLi"></li>
+					</ul>
+				</div>
+			</div>
+	</div>	
+	<div id="contents">
+			<h1>龟历补肾丸</h1>
+			<div class="content">
+<p class="MsoNormal" style="line-height: 200%; text-align: center;"><span style="color: rgb(255, 0, 255);"><b style="mso-bidi-font-weight:
+normal"><span style="font-size: 12pt; line-height: 200%; font-family: 宋体;">龟历补肾丸</span></b><b><span lang="EN-US" style="font-size: 12pt; line-height: 200%; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"></span></b><b style="mso-bidi-font-weight:
+normal"><span style="font-size: 12pt; line-height: 200%; font-family: 宋体;"></span></b><b style="mso-bidi-font-weight:
+normal"><span style="font-size: 12pt; line-height: 200%; font-family: 宋体;"></span></b></span></p>
+<p class="MsoNormal" style="margin-top:7.8pt;mso-para-margin-top:.5gd;line-height:
+200%"><span style="color: rgb(255, 0, 255);"><span style="font-size: medium;"><b style="mso-bidi-font-weight:normal"><span style="font-family: 宋体;">功能主治：</span></b></span></span></p>
+<p class="MsoNormal" style="line-height:200%"><span style="font-size: small;"><span style="font-family: 宋体;">补肾壮阳，益气血，壮筋骨<br/>
+<span style="font-size: small;"><span style="font-family: 宋体;">用于肾阳虚所致的身体虚弱<br/></span><span lang="EN-US" style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"></span><span style="font-family: 宋体;">精神疲乏、腰腿痠软<br/></span><span lang="EN-US" style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"></span><span style="font-family: 宋体;"></span><span lang="EN-US" style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">小便夜多、健忘、失眠<br/></span><span style="font-family: 宋体;">头晕目眩、精冷、性欲减退</span></span></p>
+<p class="MsoNormal" style="line-height:200%"><span lang="EN-US" style="font-family:
+&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="line-height:200%"><span style="color: rgb(255, 0, 255);"><span style="font-size: medium;"><b style="mso-bidi-font-weight:
+normal"><span style="font-family: 宋体;">注意事项：</span></b></span></span></p>
+<p class="MsoListParagraph" style="margin-top:0cm;margin-right:0cm;margin-bottom:
+0cm;margin-left:21.0pt;margin-bottom:.0001pt;text-indent:-21.0pt;line-height:
+200%;mso-pagination:none;mso-list:l0 level1 lfo1;mso-layout-grid-align:none;
+text-autospace:none"><span style="font-size: small;"><span lang="EN-US" style="line-height: 200%; font-family: Wingdings; color: rgb(35, 24, 21);">&Oslash;<span style="font: 7pt &quot;Times New Roman&quot;;">&nbsp; </span></span><span style="line-height: 200%; color: rgb(35, 24, 21);">忌不易消化食物。</span></span></p>
+<p class="MsoListParagraph" style="margin-top:0cm;margin-right:0cm;margin-bottom:
+0cm;margin-left:21.0pt;margin-bottom:.0001pt;text-indent:-21.0pt;line-height:
+200%;mso-pagination:none;mso-list:l0 level1 lfo1;mso-layout-grid-align:none;
+text-autospace:none"><span style="font-size: small;"><span lang="EN-US" style="line-height: 200%; font-family: Wingdings; color: rgb(35, 24, 21);">&Oslash;<span style="font: 7pt &quot;Times New Roman&quot;;">&nbsp; </span></span><span style="line-height: 200%; color: rgb(35, 24, 21);">感冒发热病人不宜服用。</span></span></p>
+<p class="MsoListParagraph" style="margin-top:0cm;margin-right:0cm;margin-bottom:
+0cm;margin-left:21.0pt;margin-bottom:.0001pt;text-indent:-21.0pt;line-height:
+200%;mso-pagination:none;mso-list:l0 level1 lfo1;mso-layout-grid-align:none;
+text-autospace:none"><span style="font-size: small;"><span lang="EN-US" style="line-height: 200%; font-family: Wingdings; color: rgb(35, 24, 21);">&Oslash;<span style="font: 7pt &quot;Times New Roman&quot;;">&nbsp; </span></span><span style="line-height: 200%; color: rgb(35, 24, 21);">对本品过敏者禁用，过敏体质者慎用。</span></span></p>
+<p class="MsoListParagraph" style="margin-top:0cm;margin-right:0cm;margin-bottom:
+0cm;margin-left:21.0pt;margin-bottom:.0001pt;text-align:justify;text-justify:
+inter-ideograph;text-indent:-21.0pt;line-height:200%;mso-pagination:none;
+mso-list:l0 level1 lfo1"><span style="font-size: small;"><span lang="EN-US" style="line-height: 200%; font-family: Wingdings;">&Oslash;<span style="font: 7pt &quot;Times New Roman&quot;;">&nbsp; </span></span><span style="line-height: 200%; color: rgb(35, 24, 21);">.服药4周症状无缓解，应去医院就诊。</span></span></p>
+<p class="MsoNormal" style="line-height:200%"><span lang="EN-US">&nbsp;</span></p>
+<button type="submit" class="btn btn-success radius" onclick="chanpin()"name="admin-role-save"><i class="icon-ok"></i>点击订购</button>
+			</div>
+	</div>
+	<div id="right">
+			<h1>推荐产品<span><a href="/products/?type=list&classid=7">　more<strong class="more">>></strong></a></span></h1>
+			<div class="chanpin">
+				<ul>
+				
+					<li class="li1"><a href="products/?type=detail&amp;id=102">苏肽生</a></li>
+				
+					<li class="li1"><a href="products/?type=detail&amp;id=101">还少丹</a></li>
+				
+					<li class="li1"><a href="products/?type=detail&amp;id=100">龟历补肾丸</a></li>
+				
+					<li class="li1"><a href="products/?type=detail&amp;id=99">七十味珍珠丸</a></li>
+				
+					<li class="li1"><a href="products/?type=detail&amp;id=77">脑得生片</a></li>
+				
+					<li class="li1"><a href="products/?type=detail&amp;id=98">镇脑宁胶囊</a></li>
+				
+					<li class="li1"><a href="products/?type=detail&amp;id=76">降压丸</a></li>
+				
+					<li class="li1"><a href="products/?type=detail&amp;id=75">厄贝沙坦片</a></li>
+				
+					<li class="li1"><a href="products/?type=detail&amp;id=88">吲达帕胺片</a></li>
+				
+					<li class="li1"><a href="products/?type=detail&amp;id=97">舒泰清</a></li>
+				
+					<li class="li1"><a href="products/?type=detail&amp;id=97">大豆磷脂软胶囊</a></li>
+				
+					<li class="li1"><a href="products/?type=detail&amp;id=97">灵芝松花粉片</a></li>
+				</ul>
+			</div><div class="firstPage_right_bottom"></div>
+	</div>
+</div>
+<div id="footer">
+		<p>上海执诚生物科技有限公司版权所有  沪ICP备09017734号</p>
+		<p>互联网药品信息服务资格证书:（沪）-非经营性-2011-0056</p>
+		<p><a href="/sitemap/?type=detail&id=1">站点地图</a> | <a href="/contactus/?type=detail&id=1">联系我们</a> | <a href="http://www.shzhicheng.com/upgrade.htm" target="_blank">执诚系统</a> | <a href="http://mail.shzhicheng.com/#lang=cn" target="_blank">登录邮箱</a></p>
+		<p><a href="http://sh.cyberpolice.cn/infoCategoryListAction.do?act=initjpg"><img src="images/police.png" /></a><a href="http://www.zx110.org"><img src="images/zx110.png" /></a><img src="images/icp.png" /></p>
+</div>
+</body>
+</html>

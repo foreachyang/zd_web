@@ -1,0 +1,184 @@
+div#zcservices {
+	border:1px solid #9BB9D1;
+	border-top:none;
+		width:236px;
+		height:260px;
+		margin-top:9px;
+		_margin-top:4px;
+		background:#fff url("../index_images/firstPage1.jpg") no-repeat left top;
+	}
+div#zcservices div{
+		width:236px;
+		height:250px;
+	}
+div#zcservices div ul {
+        padding-left:15px;
+        list-style: none;
+}
+div#zcservices div ul li {
+        height:28px;
+        line-height:28px;
+        font-size:14px;
+        color:#222;
+
+}
+div#zcservices div ul li.firstLi {
+        height:25px;
+        line-height:25px;
+        font-size:15px;
+        padding-left:7px;
+}
+div#zcservices ul li.firstLi span.span1 {
+        padding-left:0px;
+        color:#fff;
+}
+div#zcservices ul li.firstLi span.span2 {padding-left:10px;color:#666;font-size:10px;}
+div#zcservices ul li.firstLi span.span3 {
+        padding-left:10px;
+        color:#eee;
+        font-size:13px;
+}
+div#zcservices ul li.serviceLi {
+        height:32px;
+        line-height:16px;
+        padding-top:5px;
+        font-size:16px;
+        font-weight:bold;
+}
+div#zcservices ul li.serviceLi p.p2{padding-left:30px;}
+div#zcservices ul li.address {
+        padding-top:15px;
+        _padding-top:5px;
+        font-size:11px;
+				font-size:12px\9;
+}
+div#zcservices ul li.email p.p2 {
+        padding-left:40px;
+        padding-bottom:20px;
+}
+div#zcservices ul li span.title {
+				font-size:12px;
+				color:#555;
+}
+div#zcContents {
+		width:1366px;
+		margin:0 auto;
+		margin-top:10px;
+		overflow:hidden;
+		_overflow:visible;
+	}
+div#zcContents h1
+{
+		font-size:16px;
+		color:white;
+		width:236px;
+		line-height:25px;
+		padding-left:24px;
+		background:url("../index_images/firstPage1.jpg") no-repeat left center;
+}
+div.sidebar_left{
+		margin-top:0px;
+		padding-top:0px;
+		width:237px;
+		float:left;
+}
+#zixie1
+	{
+	
+	border:1px solid #9BB9D1;
+	border-top:none;
+	height:240px;	
+	}
+div#contents {
+		width:724px;
+		height:auto !important;
+		overflow:hidden;
+		float:left;
+		padding: 0px;
+		margin: 0px;	
+		border: 0px;		
+	}
+div#contents h1 {
+		margin-top:0px;
+		margin-bottom:0px;
+		width:690px;
+		height:25px;
+		line-height:25px;
+		padding-left:24px;
+		background:url("../index_images/noFirstPage_content_h1.gif") no-repeat left center;
+	}
+div#contents  div.content {
+		width:690px;
+		padding:16px;
+		padding-top:10px;
+		border-left:1px solid #9BB9D1;
+		border-right:1px solid #9BB9D1;
+		border-bottom:1px solid #9BB9D1;
+	}
+	div#right {
+		width:234px;
+		height:300px;
+		float:left;
+		background:#fff;
+		margin: 0px;
+	}
+div#right h1 {
+		color:white;
+		font-size:14px;
+		width:236px;
+		height:25px;
+		padding-left:20px;
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+div#right div.chanpin {
+		width:236px;
+		height:314px;
+		border:1px solid #9BB9D1;
+		border-top:none;
+		background:#f6f9fb;
+	}
+div#right ul {
+		padding:9px;
+		padding-top:4px;
+		padding-left:15px;
+		list-style: none;	
+	}
+div#right ul li {
+		height:25px;
+		line-height:25px;
+		background:url(../index_images/ico_2.gif) no-repeat left center;
+		padding-left:12px;
+		border-bottom:1px dashed #aaa;
+	}
+div#right ul li a {
+		text-decoration:none;
+		color:#333;
+	}
+div#right ul li a:hover {color:#f60;}
+
+div#footer {
+		width:990px;
+		height:150px;
+		margin:0 auto;
+		margin-top:5px;
+		text-align:center;
+		padding-top:10px;
+		font-size:16px;
+		background:#fff;
+	}
+div#footer p {
+		color:#999;
+		height:20px;
+		line-height:20px;
+	}
+div#footer p a {color:#666;text-decoration:none;}
+div#footer p a:hover {color:#f60;}
+div#footer p img {
+		margin-left:60px;
+		margin-top:5px;
+		border:none;
+	}
+	
+	
+	

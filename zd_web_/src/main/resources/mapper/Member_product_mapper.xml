@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cn.dao.Member_productdao">
+<insert id="Insert_member_product" parameterType="com.cn.pojo.Member_product_pojo">
+  insert into t_member_product(id,member_name,member_product,member_s)values(
+              #{id},
+              #{member_name},
+              #{member_product},
+              #{member_s}
+    )
+    
+</insert>
+
+
+</mapper>

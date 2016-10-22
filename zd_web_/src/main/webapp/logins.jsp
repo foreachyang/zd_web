@@ -1,0 +1,101 @@
+<!doctype html>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<html lang="zh">
+    <head>
+     
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <meta charset="UTF8">
+        <link rel="stylesheet" type="text/css" href="css\styles.css">
+        <link rel="stylesheet" type="text/css" href="Font-Awesome\font-awesome.css">
+    </head>
+    <body>
+        <div class="htmleaf-container">
+            <div class="wrapper">
+                <div class="container">
+                    <h1>生物科技有限公司登陆平台</h1>
+
+                    <form class="form">
+                        <input type="text" placeholder="username" name="userName" id="userName">
+                        <p class="fa fa-check"></p>
+                    
+                        <input type="password" placeholder="密码" name="password"  id="password">
+					<td colspan="2" align="center"> 
+			       </form>
+		   <form>	 
+	       <form>
+          <img  src="getcode" onclick="this.src='getcode?d='+new Date()*1" width="160" height="30"/>
+           <td height="40" align="right">
+          <input name="Captcha"  type="text"/>
+           <form>
+     
+                        <button type="submit" id="login-button"onclick="addUser()" >Login</button>
+         </form> 
+                </div>
+
+                <ul class="bg-bubbles">
+                 <li></li>
+                    <li></li>
+                     <li></li>
+                    <li></li>
+                     <li></li>
+                    <li></li>
+                     <li></li>
+                    <li></li>
+                     <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+        <script src="js/login.js?time=new Date()" type="text/javascript"></script>  
+        <script src="js/test.js?time=new Date()" type="text/javascript"></script>
+        <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+        
+              <script>
+           
+              $(function(){
+          		$(":input[name='userName']").change(function(){
+          			var val=$(this).val();
+          			val=$.trim(val);
+          			
+          		 if(val !=""){
+          			  var url="${pageContext.request.contextPath}/valiateUserName";
+          			  var args={"userName":val,"time": new Date()};
+          			  
+          			  $.post(url,args,function(data){
+          				 $("#message").html(data); 
+          			  });
+          		 }	
+          		})
+          	});	 
+             
+              $(function(){
+              	$("#message").mouseout(function(){
+              		$("#message").hide();
+              	});
+              	
+               });
+              </script>
+        
+        <script>
+            $('#login-button').click(function(event) {
+                event.preventDefault();
+                $('form').fadeOut(500);
+                $('.wrapper').addClass('form-success');
+            });	
+            
+       
+        </script>
+ 
+    </body>
+</html>

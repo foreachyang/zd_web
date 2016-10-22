@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>无标题文档</title>
+<script  type="text/javascript" src="js/jquery-2.2.0.js"></script>
+<script type="text/javascript">
+$(function(){
+	 $("#btnget").click(function(){
+		 $.ajax({
+			 type:"GET",
+			 dataType:"json",
+			 url:"http://localhost:8080/zd_web_/file/filesize",
+			 
+			 success:function(msg){
+				 var str="";
+				 
+				 for(i in msg){
+					 str+="<tr><td>"+msg[i].daxiao"</td></td>";
+				 }
+				 $("tbody").append(str);
+			 }
+		 });
+	 });
+});
+
+</script>
+</head>
+
+<body>
+
+
+
+<table>
+    <thead>
+        <tr>
+            <td>文件大小</td>
+            
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+<input id="btnget" type="button" value="加载数据" />
+
+</body>
+</html>

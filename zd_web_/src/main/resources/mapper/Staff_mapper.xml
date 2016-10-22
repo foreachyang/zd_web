@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cn.dao.Staffdao">
+<!-- 登录验证模块 -->
+
+<resultMap type="com.cn.pojo.Staff_pojo" id="StaffResult">
+		<result property="username" column="username"/>
+		<result property="message" column="message"/>
+</resultMap>
+	
+<select id="select_staff" parameterType="String" resultMap="StaffResult">	
+          select username message from t_staff where username=#{username}
+</select>	
+
+<insert id="insert_staff" parameterType="com.cn.pojo.Staff_pojo">
+            insert into t_staff(id,username,message) values(
+                 #{id},
+                 #{username},
+                 #{message}
+          )
+</insert>
+</mapper>

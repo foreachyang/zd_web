@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cn.dao.Admin_role_listdao">
+<resultMap type="com.cn.pojo.User" id="selectuser">
+		<result property="id" column="id"/>
+		<result property="userName" column="userName"/>
+		<result property="roleid" column="roleid"/>
+	    <result property="sync" column="sync"/>	
+</resultMap>
+
+<select id="selectuser" resultMap="selectuser">
+     select id ,username, roleid, sync from t_user
+</select>
+
+<select id="select_sumadmin" resultType="String">
+select username from t_user where roleid=1
+</select>
+</mapper>
