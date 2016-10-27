@@ -63,5 +63,4 @@ public class CSRCaptchaEngine extends ListImageCaptchaEngine {
 	        background, randomPaster, backDef, textDef, postDef);
 	    addFactory(new GimpyFactory(wordGenerator, word2image));
 	  }
-
 	}
